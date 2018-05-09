@@ -17,7 +17,7 @@ public:
 	void NewtonLawMotion::setLUG(double m1, double m2, double r);
 	double NewtonLawMotion::getLUG();
 
-private: 
+private:
 
 	double forceNet;
 	double force2;

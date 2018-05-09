@@ -30,7 +30,7 @@ double MotionParticles::chooseFunction() {
 
 	cout << "What would you like to look for? (If you'd like to get answer press a different key than ones provided or to exit program)\n"
 		"1. Average Velocity \n"
-		"2. Average Acceleration \n" 
+		"2. Average Acceleration \n"
 		"3. Average Speed \n" << endl;
 
 	cin >> choice;
@@ -56,9 +56,10 @@ double MotionParticles::chooseFunction() {
 		MotionParticles aVel;
 		aVel.setavgVelocity(a, b, c, d);
 
-		cout << "The average velocity of the object in question is: " << aVel.getavgVelocity() <<"m/s"<<endl;
+		cout << "The average velocity of the object in question is: " << aVel.getavgVelocity() << "m/s" << endl;
 
 	}
+
 
 	break;
 
@@ -80,7 +81,7 @@ double MotionParticles::chooseFunction() {
 
 		MotionParticles aAcc;
 		aAcc.setavgAcceleration(a, b, c, d);
-		cout << "The average acceleration of the object in question is: " << aAcc.getavgAcceleration() <<"m/s²" <<endl;
+		cout << "The average acceleration of the object in question is: " << aAcc.getavgAcceleration() << "m/s²" << endl;
 	}
 
 	break;
@@ -100,7 +101,7 @@ double MotionParticles::chooseFunction() {
 		MotionParticles aSpeed;
 		aSpeed.setavgSpeed(a, b);
 
-		cout << "The average speed of the object is: " << aSpeed.getavgSpeed() <<"m/s" <<endl;
+		cout << "The average speed of the object is: " << aSpeed.getavgSpeed() << "m/s" << endl;
 
 	}
 

@@ -9,18 +9,19 @@ NewtonLawMotion::NewtonLawMotion()
 {
 	;
 	int choice;
-	
-	cout << "What would you like to calculate? \n" 
+
+	cout << "What would you like to calculate? \n"
 		"1. Fnet(Net Force) \n"
 		"2. Action-Reaction Law \n"
-		"3. Weight \n" 
-		"4. Universal Law of Gravitation of 2 Objects \n"<< endl;
+		"3. Weight \n"
+		"4. Universal Law of Gravitation of 2 Objects \n" 
+		"5. Force tension \n"<< endl;
 
 
 
-	cin >> choice; 
-	
-	switch(choice) {
+	cin >> choice;
+
+	switch (choice) {
 
 	case 1: {
 		double a, b, c;
@@ -34,7 +35,7 @@ NewtonLawMotion::NewtonLawMotion()
 		NewtonLawMotion nlm;
 		nlm.setFnet(a, b);
 
-		cout << "The Fnet(net force) of the object is: " << nlm.getFnet() << "N"<< endl;
+		cout << "The Fnet(net force) of the object is: " << nlm.getFnet() << "N" << endl;
 
 	}
 
@@ -62,9 +63,9 @@ NewtonLawMotion::NewtonLawMotion()
 	}
 
 
-		break;
+			break;
 
-		
+
 
 	case 3: {
 		double a, b, c;
@@ -79,12 +80,12 @@ NewtonLawMotion::NewtonLawMotion()
 
 		cout << "The weight of the object is: " << fG << endl;
 
-		
+
 
 
 
 	}
-	
+
 	case 4: {
 		double a, b, c;
 
@@ -105,9 +106,28 @@ NewtonLawMotion::NewtonLawMotion()
 		NewtonLawMotion LUG;
 		LUG.setLUG(a, b, c);
 
-		cout << "The magnitude of the gravitational force of object 1 on object 2 is: " << LUG.getLUG() <<"N"<<endl;
+		cout << "The magnitude of the gravitational force of object 1 on object 2 is: " << LUG.getLUG() << "N" << endl;
 
 	}
+
+	case 5: {
+		double a, b, c;
+
+
+		cout << "Tension is measured by the weight(mass x gravity) minus the speed(mass x acceleration). \n"
+			"Also the tension must always be less than the weight of an object." << endl;
+
+		cout << endl;
+
+		cout << "What is the weight of the object?" << endl;
+		cin >> a; 
+
+		cout << "What is the speed of the object?" << endl;
+		cin >> b; 
+
+
+	}
+
 
 
 	}
@@ -120,7 +140,7 @@ NewtonLawMotion::NewtonLawMotion()
 }
 
 
-NewtonLawMotion::~NewtonLawMotion() 
+NewtonLawMotion::~NewtonLawMotion()
 {}
 
 
@@ -130,7 +150,7 @@ void NewtonLawMotion::setFnet(double m, double a) {     //Fnet(net force of obje
 
 	double fNet;
 
-	fNet = m * a; 
+	fNet = m * a;
 	forceNet = fNet;
 
 }
@@ -143,7 +163,7 @@ double NewtonLawMotion::getFnet() {
 
 // -------------------------------------------------------------------------------Action-Reaction Force
 
-void NewtonLawMotion::setacReacF (double f1){
+void NewtonLawMotion::setacReacF(double f1) {
 	double f2;
 
 	f2 = f1;
@@ -161,7 +181,7 @@ double NewtonLawMotion::getacReacF() {
 // ----------------------------------------------------------------------------Weight
 
 
-void NewtonLawMotion:: setweight(double a) {
+void NewtonLawMotion::setweight(double a) {
 
 	double fG;
 
